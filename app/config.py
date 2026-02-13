@@ -37,6 +37,10 @@ class Settings(BaseSettings):
     # Max total block range for scan window (0 = unlimited, use for free RPC testing)
     max_scan_block_range: int = 0
 
+    # Payment
+    pay_to_address_base: str = ""
+    pay_to_address_solana: str = ""
+
     # Server
     log_level: str = "INFO"
     host: str = "0.0.0.0"
