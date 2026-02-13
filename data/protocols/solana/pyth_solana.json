@@ -1,0 +1,46 @@
+{
+  "id": "pyth_solana",
+  "name": "Pyth Network",
+  "chain": "solana",
+  "category": "oracle",
+  "subcategory": "oracle_staking",
+  "has_token": true,
+  "token_symbol": "PYTH",
+  "status": "active",
+  "protocol_weight": 0.8,
+
+  "contracts": [
+    {
+      "address": "pytS9TjG1qyAZypk7n8rw8gfW9sUaqqYyMhJQ4E7JCQ",
+      "label": "Pyth Staking Program",
+      "type": "staking",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "PYTH airdrop completed Nov 2023 for DeFi users across multiple chains"
+    ],
+    "community_speculation": [
+      "Staking PYTH may earn future governance rewards",
+      "Cross-chain DeFi usage that relied on Pyth oracles was rewarded"
+    ],
+    "notable_events": [
+      "PYTH token launch Nov 2023",
+      "Retrospective airdrop to users of Pyth-integrated protocols"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://pyth.network",
+    "docs": "https://docs.pyth.network",
+    "twitter": "@PythNetwork"
+  },
+
+  "last_verified": "2026-02-12"
+}

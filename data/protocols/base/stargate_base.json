@@ -1,0 +1,63 @@
+{
+  "id": "stargate_base",
+  "name": "Stargate",
+  "chain": "base",
+  "category": "bridge",
+  "subcategory": "omnichain_bridge",
+  "has_token": true,
+  "token_symbol": "STG",
+  "status": "active",
+  "protocol_weight": 0.9,
+
+  "contracts": [
+    {
+      "address": "0x45f1a95a4d3f3836523f5c83673c797f4d4d263b",
+      "label": "Stargate Router (Base)",
+      "type": "router",
+      "detection_mode": "event_topic",
+      "detection_config": {
+        "event_signatures": [
+          {
+            "topic0": "0x34660fc8af304464529f48a778e03d03e4d34bcd5f9b6f0cfbf3cd238c642f7f",
+            "user_address_position": "topic1",
+            "interaction_type": "bridge_send"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x27a16dc786820b16e5c9028b75b99f6f604b5d26",
+      "label": "Stargate USDC Pool (Base)",
+      "type": "pool",
+      "detection_mode": "transfer_to_contract",
+      "detection_config": {
+        "token_contracts": ["0x833589fcd6edb6e08f4c7c32d4f71b54bda02913"],
+        "interaction_type": "liquidity_provision"
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "STG token live since 2022",
+      "Ongoing emissions to LPs across chains"
+    ],
+    "community_speculation": [
+      "Active bridge usage may earn future distributions",
+      "Cross-chain LP provision on Base specifically may be rewarded"
+    ],
+    "notable_events": [
+      "Stargate v2 launched on Base",
+      "LayerZero ecosystem protocol"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://stargate.finance",
+    "docs": "https://docs.stargate.finance",
+    "twitter": "@StargateFinance"
+  },
+
+  "last_verified": "2026-02-12"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "kamino_solana",
+  "name": "Kamino",
+  "chain": "solana",
+  "category": "lending",
+  "subcategory": "lending_and_liquidity",
+  "has_token": true,
+  "token_symbol": "KMNO",
+  "status": "active",
+  "protocol_weight": 1.0,
+
+  "contracts": [
+    {
+      "address": "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD",
+      "label": "Kamino Lending (kLend) Program",
+      "type": "core",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    },
+    {
+      "address": "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc",
+      "label": "Kamino Liquidity Program",
+      "type": "vault",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "KMNO airdrop completed April 2024 for lending and liquidity users",
+      "Points-based system used for allocation"
+    ],
+    "community_speculation": [
+      "Ongoing points program — additional distributions expected",
+      "Lending, borrowing, and liquidity provision all earn points",
+      "Multiply (leveraged) positions may earn higher allocations"
+    ],
+    "notable_events": [
+      "KMNO token launch April 2024",
+      "Multiple seasons of points program"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://kamino.finance",
+    "docs": "https://docs.kamino.finance",
+    "twitter": "@KaminoFinance"
+  },
+
+  "last_verified": "2026-02-12"
+}

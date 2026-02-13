@@ -1,0 +1,46 @@
+{
+  "id": "magic_eden_solana",
+  "name": "Magic Eden",
+  "chain": "solana",
+  "category": "nft",
+  "subcategory": "nft_marketplace",
+  "has_token": true,
+  "token_symbol": "ME",
+  "status": "active",
+  "protocol_weight": 0.9,
+
+  "contracts": [
+    {
+      "address": "M2mx93ekt1fmXSVkTrUL9xVFHkmME8HTUi5Cyc5aF7K",
+      "label": "Magic Eden v2 Program",
+      "type": "core",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "ME token airdrop completed Dec 2024 for marketplace users across chains"
+    ],
+    "community_speculation": [
+      "Ongoing usage may factor into future distributions",
+      "Cross-chain NFT activity (Solana + Bitcoin + EVM) may be rewarded"
+    ],
+    "notable_events": [
+      "ME token launch Dec 2024",
+      "Expanded to Bitcoin Ordinals and EVM chains"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://magiceden.io",
+    "docs": "https://docs.magiceden.io",
+    "twitter": "@MagicEden"
+  },
+
+  "last_verified": "2026-02-12"
+}

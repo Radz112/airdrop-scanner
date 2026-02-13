@@ -1,0 +1,67 @@
+{
+  "id": "debridge_base",
+  "name": "deBridge",
+  "chain": "base",
+  "category": "bridge",
+  "subcategory": "cross_chain_bridge",
+  "has_token": true,
+  "token_symbol": "DBR",
+  "status": "active",
+  "protocol_weight": 0.9,
+
+  "contracts": [
+    {
+      "address": "0xef4fb24ad0916217251f553c0596f8edc630eb66",
+      "label": "DLN Source (deBridge)",
+      "type": "core",
+      "detection_mode": "event_topic",
+      "detection_config": {
+        "event_signatures": [
+          {
+            "topic0": "0xc4980459837e213f16b2e5bfed4e0619a8a95c1bca9ef2cb08a1cd5f22a40d02",
+            "user_address_position": "topic1",
+            "interaction_type": "bridge_order_created"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0xe7351fd770a37282b91d153ee690b63579d6dd7f",
+      "label": "DLN Destination (deBridge)",
+      "type": "destination",
+      "detection_mode": "event_topic",
+      "detection_config": {
+        "event_signatures": [
+          {
+            "topic0": "0xd281ee572f6e79f40873b1696690d2429bb397a2e80394c36e7b7e6e04fbe8c3",
+            "user_address_position": "topic1",
+            "interaction_type": "bridge_order_fulfilled"
+          }
+        ]
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "DBR token launched Oct 2024 for bridge users"
+    ],
+    "community_speculation": [
+      "Ongoing usage may earn future distributions",
+      "High-volume bridge users may be rewarded"
+    ],
+    "notable_events": [
+      "DBR token airdrop completed Oct 2024",
+      "deBridge is a high-speed cross-chain bridge"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://debridge.finance",
+    "docs": "https://docs.debridge.finance",
+    "twitter": "@daboratory"
+  },
+
+  "last_verified": "2026-02-12"
+}

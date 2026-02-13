@@ -1,0 +1,55 @@
+{
+  "id": "tensor_solana",
+  "name": "Tensor",
+  "chain": "solana",
+  "category": "nft",
+  "subcategory": "nft_marketplace",
+  "has_token": true,
+  "token_symbol": "TNSR",
+  "status": "active",
+  "protocol_weight": 0.9,
+
+  "contracts": [
+    {
+      "address": "TSWAPaqyCSx2KABk68Shruf4rp7CxcNi8hAsbdwmHbN",
+      "label": "Tensor Swap Program",
+      "type": "core",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    },
+    {
+      "address": "TCMPhJdwDryooaGtiocG1u3xcYbRpiJzb283XfCZsDp",
+      "label": "Tensor Marketplace Program",
+      "type": "marketplace",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "TNSR airdrop completed April 2024 for marketplace traders"
+    ],
+    "community_speculation": [
+      "Ongoing trading rewards program may yield future distributions",
+      "NFT listing and bidding activity tracked"
+    ],
+    "notable_events": [
+      "TNSR token launch April 2024",
+      "Season-based rewards program ongoing"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://tensor.trade",
+    "docs": "https://docs.tensor.trade",
+    "twitter": "@tensor_hq"
+  },
+
+  "last_verified": "2026-02-12"
+}

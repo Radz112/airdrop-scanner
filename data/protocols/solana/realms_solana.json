@@ -1,0 +1,45 @@
+{
+  "id": "realms_solana",
+  "name": "Realms DAO",
+  "chain": "solana",
+  "category": "governance",
+  "subcategory": "dao_governance",
+  "has_token": false,
+  "token_symbol": null,
+  "status": "active",
+  "protocol_weight": 1.1,
+
+  "contracts": [
+    {
+      "address": "GovER5Lthms3bLBqWub97yVrMmEogzX7xNjdXpPPCVZw",
+      "label": "SPL Governance Program",
+      "type": "core",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [],
+    "community_speculation": [
+      "Governance participation across DAOs may be rewarded",
+      "Creating proposals and voting are key signals",
+      "Active participation in multiple DAOs speculated to increase allocation"
+    ],
+    "notable_events": [
+      "Realms is the primary DAO governance platform on Solana",
+      "No token announced yet"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://realms.today",
+    "docs": "https://docs.realms.today",
+    "twitter": "@solaboratory"
+  },
+
+  "last_verified": "2026-02-12"
+}

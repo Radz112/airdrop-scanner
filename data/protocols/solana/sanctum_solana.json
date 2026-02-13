@@ -1,0 +1,56 @@
+{
+  "id": "sanctum_solana",
+  "name": "Sanctum",
+  "chain": "solana",
+  "category": "liquid_staking",
+  "subcategory": "lst_aggregator",
+  "has_token": true,
+  "token_symbol": "CLOUD",
+  "status": "active",
+  "protocol_weight": 1.0,
+
+  "contracts": [
+    {
+      "address": "unpXTU2Ndrc7WWNyEhQWe4udTzSibLPi25SXv2xbCHQ",
+      "label": "Sanctum Router Program",
+      "type": "router",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    },
+    {
+      "address": "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9Kx",
+      "label": "Sanctum Infinity Pool Program",
+      "type": "pool",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "CLOUD airdrop completed July 2024 for Sanctum users and LST holders"
+    ],
+    "community_speculation": [
+      "Ongoing Wonderland points system may lead to future distributions",
+      "Using Sanctum router for LST swaps earns points",
+      "Holding INF (Sanctum Infinity) token may be rewarded"
+    ],
+    "notable_events": [
+      "CLOUD token launch July 2024",
+      "Sanctum Wonderland points program ongoing"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://sanctum.so",
+    "docs": "https://docs.sanctum.so",
+    "twitter": "@sanctumso"
+  },
+
+  "last_verified": "2026-02-12"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "lifinity_solana",
+  "name": "Lifinity",
+  "chain": "solana",
+  "category": "dex",
+  "subcategory": "proactive_market_maker",
+  "has_token": true,
+  "token_symbol": "LFNTY",
+  "status": "active",
+  "protocol_weight": 0.8,
+
+  "contracts": [
+    {
+      "address": "2wT8Yq49kHgDzXuPxZSaeLaH1qbmGXtEyPy64bL7aD3c",
+      "label": "Lifinity DEX v2 Program",
+      "type": "core",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "LFNTY token distributed via NFT flares mechanism"
+    ],
+    "community_speculation": [
+      "Holding Lifinity Flares NFTs earns LFNTY distributions",
+      "Swap usage may factor into future allocations"
+    ],
+    "notable_events": [
+      "Unique tokenomics via Flares NFTs",
+      "Protocol-owned liquidity model"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://lifinity.io",
+    "docs": "https://docs.lifinity.io",
+    "twitter": "@Lifinity_io"
+  },
+
+  "last_verified": "2026-02-12"
+}

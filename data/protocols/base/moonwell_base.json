@@ -1,0 +1,68 @@
+{
+  "id": "moonwell_base",
+  "name": "Moonwell",
+  "chain": "base",
+  "category": "lending",
+  "subcategory": "money_market",
+  "has_token": true,
+  "token_symbol": "WELL",
+  "status": "active",
+  "protocol_weight": 1.0,
+
+  "contracts": [
+    {
+      "address": "0xfbb21d0380bee3312b33c4353c8936a0f13ef26c",
+      "label": "Moonwell Comptroller",
+      "type": "core",
+      "detection_mode": "event_topic",
+      "detection_config": {
+        "event_signatures": [
+          {
+            "topic0": "0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c6fef26394f4c03821c4f",
+            "user_address_position": "topic1",
+            "interaction_type": "mint_supply"
+          },
+          {
+            "topic0": "0x13ed6866d4e1ee6da46f845c46d7e54120883d75c5ea9a5ce2bc99211b56a8e8",
+            "user_address_position": "topic1",
+            "interaction_type": "borrow"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x628ff693426583d9a7fb391e54366292f509d457",
+      "label": "Moonwell USDC Market",
+      "type": "market",
+      "detection_mode": "transfer_to_contract",
+      "detection_config": {
+        "token_contracts": ["0x833589fcd6edb6e08f4c7c32d4f71b54bda02913"],
+        "interaction_type": "supply"
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "WELL token distributed on Moonbeam, expanded to Base",
+      "Ongoing WELL rewards for supply/borrow activity"
+    ],
+    "community_speculation": [
+      "Base-specific distributions may be separate",
+      "Governance participation earns additional rewards"
+    ],
+    "notable_events": [
+      "Expanded from Moonbeam to Base",
+      "Ongoing WELL token incentives"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://moonwell.fi",
+    "docs": "https://docs.moonwell.fi",
+    "twitter": "@MoonwellDeFi"
+  },
+
+  "last_verified": "2026-02-12"
+}

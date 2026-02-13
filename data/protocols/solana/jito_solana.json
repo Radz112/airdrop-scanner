@@ -1,0 +1,55 @@
+{
+  "id": "jito_solana",
+  "name": "Jito",
+  "chain": "solana",
+  "category": "liquid_staking",
+  "subcategory": "liquid_staking",
+  "has_token": true,
+  "token_symbol": "JTO",
+  "status": "active",
+  "protocol_weight": 1.0,
+
+  "contracts": [
+    {
+      "address": "Jito4APyf642JPZPx3hGc6WWJ8zPKtRbRs4P815Awbb",
+      "label": "Jito Stake Pool Program",
+      "type": "core",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    },
+    {
+      "address": "jitovs7kCBYRvspu4ECzF1zGzERRCNuf8SE8ZVkNMdE",
+      "label": "Jito Vault Program",
+      "type": "vault",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "JTO airdrop completed Dec 2023 for JitoSOL holders and stakers"
+    ],
+    "community_speculation": [
+      "Ongoing distributions possible for restaking (VRT) participants",
+      "Governance participation may earn future allocations"
+    ],
+    "notable_events": [
+      "JTO airdrop Dec 2023 — one of largest Solana airdrops",
+      "Restaking / VRT product launched post-airdrop"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://www.jito.network",
+    "docs": "https://docs.jito.network",
+    "twitter": "@jaboratory"
+  },
+
+  "last_verified": "2026-02-12"
+}

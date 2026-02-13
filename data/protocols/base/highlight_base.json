@@ -1,0 +1,44 @@
+{
+  "id": "highlight_base",
+  "name": "Highlight",
+  "chain": "base",
+  "category": "nft",
+  "subcategory": "nft_minting",
+  "has_token": false,
+  "token_symbol": null,
+  "status": "active",
+  "protocol_weight": 1.0,
+
+  "contracts": [
+    {
+      "address": "0x8087039152c472fa74f47398628ff002994056ea",
+      "label": "Highlight MintManager",
+      "type": "core",
+      "detection_mode": "tx_to_contract",
+      "detection_config": {
+        "interaction_type": "mint"
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [],
+    "community_speculation": [
+      "No token yet — airdrop possible for minters",
+      "Creating collections and minting NFTs likely key criteria",
+      "Platform supports generative art — creator activity may be weighted"
+    ],
+    "notable_events": [
+      "Growing NFT minting platform on Base and Ethereum"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://highlight.xyz",
+    "docs": "https://docs.highlight.xyz",
+    "twitter": "@highlight_xyz"
+  },
+
+  "last_verified": "2026-02-12"
+}

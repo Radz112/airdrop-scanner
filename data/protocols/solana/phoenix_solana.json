@@ -1,0 +1,46 @@
+{
+  "id": "phoenix_solana",
+  "name": "Phoenix",
+  "chain": "solana",
+  "category": "dex",
+  "subcategory": "orderbook",
+  "has_token": false,
+  "token_symbol": null,
+  "status": "active",
+  "protocol_weight": 1.3,
+
+  "contracts": [
+    {
+      "address": "PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY",
+      "label": "Phoenix DEX Program",
+      "type": "core",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [],
+    "community_speculation": [
+      "High airdrop speculation — no token yet",
+      "Trading volume and frequency likely key criteria",
+      "Limit order placement may be weighted differently than market orders",
+      "Early users and consistent traders speculated to be rewarded"
+    ],
+    "notable_events": [
+      "Backed by Ellipsis Labs",
+      "One of the most anticipated Solana DEX airdrops"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://www.phoenix.trade",
+    "docs": "https://docs.phoenix.trade",
+    "twitter": "@PhoenixTrade"
+  },
+
+  "last_verified": "2026-02-12"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "morpho_base",
+  "name": "Morpho",
+  "chain": "base",
+  "category": "lending",
+  "subcategory": "money_market",
+  "has_token": true,
+  "token_symbol": "MORPHO",
+  "status": "active",
+  "protocol_weight": 1.2,
+
+  "contracts": [
+    {
+      "address": "0xbbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb",
+      "label": "Morpho Blue",
+      "type": "core",
+      "detection_mode": "event_topic",
+      "detection_config": {
+        "event_signatures": [
+          {
+            "topic0": "0xedf8870433c83823eb071d3df1caa8d008f12f6440918c20d75a3602cda30fe0",
+            "user_address_position": "topic3",
+            "interaction_type": "supply"
+          },
+          {
+            "topic0": "0x570954540bed6b1304a87dfe815a5eda4a648f7097a16240dcd85c9b5fd42a43",
+            "user_address_position": "topic3",
+            "interaction_type": "borrow"
+          },
+          {
+            "topic0": "0xa56fc0ad5702ec05ce63666221f796fb62437c32db1571e00200c21b7d1b2ab5",
+            "user_address_position": "topic3",
+            "interaction_type": "withdraw"
+          },
+          {
+            "topic0": "0x52acb05cebbd3cd39715469f22afbf5a17496295ef3bc9bb5944056c63ccaa09",
+            "user_address_position": "topic3",
+            "interaction_type": "repay"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x6566194141eefa99af43bb5aa71460ca2dc90245",
+      "label": "Morpho Bundler3",
+      "type": "router",
+      "detection_mode": "tx_to_contract",
+      "detection_config": {
+        "interaction_type": "bundled_action"
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "MORPHO token launched — distributed to early users",
+      "Ongoing distribution via MORPHO rewards on markets"
+    ],
+    "community_speculation": [
+      "Supplying and borrowing across multiple markets increases rewards",
+      "MetaMorpho vault deposits may earn additional allocations",
+      "Long holding duration speculated to be weighted"
+    ],
+    "notable_events": [
+      "MORPHO token transferable Dec 2024",
+      "Ongoing rewards program on Base and Ethereum"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://morpho.org",
+    "docs": "https://docs.morpho.org",
+    "twitter": "@MorphoLabs"
+  },
+
+  "last_verified": "2026-02-12"
+}

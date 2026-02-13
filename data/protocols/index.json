@@ -1,0 +1,46 @@
+{
+  "version": "0.1.0",
+  "last_updated": "2026-02-12",
+  "chains": {
+    "base": {
+      "protocol_count": 15,
+      "protocols": [
+        {"id": "morpho_base", "name": "Morpho", "category": "lending", "has_token": true},
+        {"id": "seamless_base", "name": "Seamless Protocol", "category": "lending", "has_token": true},
+        {"id": "moonwell_base", "name": "Moonwell", "category": "lending", "has_token": true},
+        {"id": "aerodrome_base", "name": "Aerodrome", "category": "dex", "has_token": true},
+        {"id": "baseswap_base", "name": "BaseSwap", "category": "dex", "has_token": true},
+        {"id": "swapbased_base", "name": "SwapBased", "category": "dex", "has_token": true},
+        {"id": "zora_base", "name": "Zora", "category": "nft", "has_token": false},
+        {"id": "highlight_base", "name": "Highlight", "category": "nft", "has_token": false},
+        {"id": "stargate_base", "name": "Stargate", "category": "bridge", "has_token": true},
+        {"id": "debridge_base", "name": "deBridge", "category": "bridge", "has_token": true},
+        {"id": "extra_finance_base", "name": "Extra Finance", "category": "yield", "has_token": true},
+        {"id": "beefy_base", "name": "Beefy Finance", "category": "yield", "has_token": true},
+        {"id": "avantis_base", "name": "Avantis", "category": "perps", "has_token": true},
+        {"id": "bmx_base", "name": "BMX (Morphex)", "category": "perps", "has_token": true},
+        {"id": "paragraph_base", "name": "Paragraph", "category": "social", "has_token": false}
+      ]
+    },
+    "solana": {
+      "protocol_count": 15,
+      "protocols": [
+        {"id": "marginfi_solana", "name": "MarginFi", "category": "lending", "has_token": false},
+        {"id": "kamino_solana", "name": "Kamino", "category": "lending", "has_token": true},
+        {"id": "save_solana", "name": "Save (Solend)", "category": "lending", "has_token": true},
+        {"id": "drift_solana", "name": "Drift Protocol", "category": "perps", "has_token": true},
+        {"id": "phoenix_solana", "name": "Phoenix", "category": "dex", "has_token": false},
+        {"id": "lifinity_solana", "name": "Lifinity", "category": "dex", "has_token": true},
+        {"id": "sanctum_solana", "name": "Sanctum", "category": "liquid_staking", "has_token": true},
+        {"id": "jito_solana", "name": "Jito", "category": "liquid_staking", "has_token": true},
+        {"id": "meteora_solana", "name": "Meteora", "category": "dex", "has_token": false},
+        {"id": "tensor_solana", "name": "Tensor", "category": "nft", "has_token": true},
+        {"id": "magic_eden_solana", "name": "Magic Eden", "category": "nft", "has_token": true},
+        {"id": "wormhole_solana", "name": "Wormhole", "category": "bridge", "has_token": true},
+        {"id": "pyth_solana", "name": "Pyth Network", "category": "oracle", "has_token": true},
+        {"id": "switchboard_solana", "name": "Switchboard", "category": "oracle", "has_token": true},
+        {"id": "realms_solana", "name": "Realms DAO", "category": "governance", "has_token": false}
+      ]
+    }
+  }
+}

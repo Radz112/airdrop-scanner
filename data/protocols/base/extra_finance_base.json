@@ -1,0 +1,50 @@
+{
+  "id": "extra_finance_base",
+  "name": "Extra Finance",
+  "chain": "base",
+  "category": "yield",
+  "subcategory": "leveraged_yield",
+  "has_token": true,
+  "token_symbol": "EXTRA",
+  "status": "active",
+  "protocol_weight": 0.9,
+
+  "contracts": [
+    {
+      "address": "0xbb505c54d71e9e599cb8435b4f0ceec05fc71cbd",
+      "label": "Extra Finance Lending Pool",
+      "type": "core",
+      "detection_mode": "transfer_to_contract",
+      "detection_config": {
+        "token_contracts": [
+          "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "0x4200000000000000000000000000000000000006"
+        ],
+        "interaction_type": "supply"
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [],
+    "community_speculation": [
+      "No token yet — airdrop speculated",
+      "Lending and leveraged farming likely key criteria",
+      "Points program may be tracking usage for future distribution",
+      "Early and consistent usage expected to be rewarded"
+    ],
+    "notable_events": [
+      "Base-native leveraged yield farming protocol",
+      "Growing TVL on Base"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://extra.finance",
+    "docs": "https://docs.extra.finance",
+    "twitter": "@ExtraFi_io"
+  },
+
+  "last_verified": "2026-02-12"
+}

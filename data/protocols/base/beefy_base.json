@@ -1,0 +1,50 @@
+{
+  "id": "beefy_base",
+  "name": "Beefy Finance",
+  "chain": "base",
+  "category": "yield",
+  "subcategory": "yield_optimizer",
+  "has_token": true,
+  "token_symbol": "BIFI",
+  "status": "active",
+  "protocol_weight": 0.8,
+
+  "contracts": [
+    {
+      "address": "0x5bce1e0e59a86eb2a3cd88c5137beb55c16e3e87",
+      "label": "Beefy Vault Factory (Base)",
+      "type": "factory",
+      "detection_mode": "transfer_to_contract",
+      "detection_config": {
+        "token_contracts": [
+          "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "0x4200000000000000000000000000000000000006"
+        ],
+        "interaction_type": "deposit"
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "BIFI token live — distributed via earnings and governance"
+    ],
+    "community_speculation": [
+      "Ongoing yield farming rewards on Base vaults",
+      "BIFI staking earns protocol revenue share"
+    ],
+    "notable_events": [
+      "Multi-chain yield optimizer",
+      "Deployed on Base with multiple vault strategies"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://beefy.finance",
+    "docs": "https://docs.beefy.finance",
+    "twitter": "@beaboratory"
+  },
+
+  "last_verified": "2026-02-12"
+}

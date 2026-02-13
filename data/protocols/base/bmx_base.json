@@ -1,0 +1,56 @@
+{
+  "id": "bmx_base",
+  "name": "BMX (Morphex)",
+  "chain": "base",
+  "category": "perps",
+  "subcategory": "perpetual_trading",
+  "has_token": true,
+  "token_symbol": "BMX",
+  "status": "active",
+  "protocol_weight": 0.9,
+
+  "contracts": [
+    {
+      "address": "0xc608188e753b1e9558731724b7f7cdde40c3b174",
+      "label": "BMX Router",
+      "type": "router",
+      "detection_mode": "tx_to_contract",
+      "detection_config": {
+        "interaction_type": "swap_or_trade"
+      }
+    },
+    {
+      "address": "0xec8d8d4b215727f3476ff0ab41c406fa99b4272c",
+      "label": "BMX Vault",
+      "type": "vault",
+      "detection_mode": "transfer_to_contract",
+      "detection_config": {
+        "token_contracts": ["0x4200000000000000000000000000000000000006"],
+        "interaction_type": "deposit"
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "BMX token live — GMX-style tokenomics"
+    ],
+    "community_speculation": [
+      "Staking BMX/BLT earns protocol fees",
+      "Active traders may receive bonus distributions"
+    ],
+    "notable_events": [
+      "Morphex rebranded to BMX on Base",
+      "GMX fork with escrowed reward model"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://bmx.trade",
+    "docs": "https://docs.bmx.trade",
+    "twitter": "@BMX_DEX"
+  },
+
+  "last_verified": "2026-02-12"
+}

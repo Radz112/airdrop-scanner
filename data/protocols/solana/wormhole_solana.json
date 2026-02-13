@@ -1,0 +1,55 @@
+{
+  "id": "wormhole_solana",
+  "name": "Wormhole",
+  "chain": "solana",
+  "category": "bridge",
+  "subcategory": "cross_chain_messaging",
+  "has_token": true,
+  "token_symbol": "W",
+  "status": "active",
+  "protocol_weight": 0.9,
+
+  "contracts": [
+    {
+      "address": "worm2ZoG2kUd4vFXhvjh93UUH596ayRfgQ2MgjNMTth",
+      "label": "Wormhole Core Bridge",
+      "type": "core",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    },
+    {
+      "address": "wormDTUJ6AWPNvk59vGQbDvGJmqbDTdgWgAqcLBCgUb",
+      "label": "Wormhole Token Bridge",
+      "type": "bridge",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "W token airdrop completed April 2024 for bridge users"
+    ],
+    "community_speculation": [
+      "Future distributions possible for continued bridge usage",
+      "Multichain activity (bridging to multiple chains) may be rewarded"
+    ],
+    "notable_events": [
+      "W token launch April 2024",
+      "Wormhole raised $225M in 2023"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://wormhole.com",
+    "docs": "https://docs.wormhole.com",
+    "twitter": "@waboratory"
+  },
+
+  "last_verified": "2026-02-12"
+}

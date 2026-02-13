@@ -1,0 +1,77 @@
+{
+  "id": "aerodrome_base",
+  "name": "Aerodrome",
+  "chain": "base",
+  "category": "dex",
+  "subcategory": "ve_dex",
+  "has_token": true,
+  "token_symbol": "AERO",
+  "status": "active",
+  "protocol_weight": 1.0,
+
+  "contracts": [
+    {
+      "address": "0xcf77a3ba9a5ca399b7c97c74d54e5b1beb874e43",
+      "label": "Aerodrome Router",
+      "type": "router",
+      "detection_mode": "tx_to_contract",
+      "detection_config": {
+        "interaction_type": "swap"
+      }
+    },
+    {
+      "address": "0x16613524e02ad97edfef371bc883f2f5d6c480a5",
+      "label": "Aerodrome Voter",
+      "type": "governance",
+      "detection_mode": "event_topic",
+      "detection_config": {
+        "event_signatures": [
+          {
+            "topic0": "0xf279e6a1f5e320cca91135676d9cb6e44ca8a08c0b88342bcdb1144f6511b568",
+            "user_address_position": "topic1",
+            "interaction_type": "vote"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x420dd381b31aef6683db6b902084cb0ffece40da",
+      "label": "Aerodrome Pool Factory",
+      "type": "factory",
+      "detection_mode": "event_topic",
+      "detection_config": {
+        "event_signatures": [
+          {
+            "topic0": "0x2128d88d14c80cb081c1252a5acff7a264671bf199ce226b53788fb26065005e",
+            "user_address_position": "topic1",
+            "interaction_type": "create_pool"
+          }
+        ]
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "AERO token launched with emissions to LPs",
+      "veAERO lockers earn trading fees and bribes"
+    ],
+    "community_speculation": [
+      "Ongoing AERO emissions to liquidity providers",
+      "veAERO voting earns bribes from protocols"
+    ],
+    "notable_events": [
+      "AERO token launched Aug 2023",
+      "Primary DEX on Base by TVL"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://aerodrome.finance",
+    "docs": "https://docs.aerodrome.finance",
+    "twitter": "@AesomerFi"
+  },
+
+  "last_verified": "2026-02-12"
+}

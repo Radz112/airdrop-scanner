@@ -1,0 +1,55 @@
+{
+  "id": "switchboard_solana",
+  "name": "Switchboard",
+  "chain": "solana",
+  "category": "oracle",
+  "subcategory": "oracle_network",
+  "has_token": true,
+  "token_symbol": "SB",
+  "status": "active",
+  "protocol_weight": 0.8,
+
+  "contracts": [
+    {
+      "address": "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f",
+      "label": "Switchboard v2 Program",
+      "type": "core",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    },
+    {
+      "address": "SBondMDrcV3K4kxZR1HNVT7osZxAHVHgYXL5Ze1oMUv",
+      "label": "Switchboard Staking Program",
+      "type": "staking",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "SB token launched — distributed to oracle operators and stakers"
+    ],
+    "community_speculation": [
+      "Staking SB tokens for oracle security may earn rewards",
+      "Running oracle nodes / participating in feeds may earn future allocations"
+    ],
+    "notable_events": [
+      "SB token launched",
+      "Switchboard is primary oracle alternative to Pyth on Solana"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://switchboard.xyz",
+    "docs": "https://docs.switchboard.xyz",
+    "twitter": "@switchaboratory"
+  },
+
+  "last_verified": "2026-02-12"
+}

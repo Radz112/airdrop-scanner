@@ -1,0 +1,52 @@
+{
+  "id": "avantis_base",
+  "name": "Avantis",
+  "chain": "base",
+  "category": "perps",
+  "subcategory": "perpetual_trading",
+  "has_token": true,
+  "token_symbol": "AVNT",
+  "status": "active",
+  "protocol_weight": 0.9,
+
+  "contracts": [
+    {
+      "address": "0x44914408af82bc9983bbb330e3578e1105e11d4e",
+      "label": "Avantis Trading V1.5",
+      "type": "core",
+      "detection_mode": "event_topic",
+      "detection_config": {
+        "event_signatures": [
+          {
+            "topic0": "0x2eadfcb443a3a496650f3804fc498a87a5a4de1e52c520f5b8f42ce7e4cc8791",
+            "user_address_position": "topic1",
+            "interaction_type": "open_trade"
+          }
+        ]
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [],
+    "community_speculation": [
+      "No token yet — airdrop speculated",
+      "Trading volume and frequency likely key criteria",
+      "Points/rewards system may be tracking activity",
+      "Base-native perpetual DEX with growing TVL"
+    ],
+    "notable_events": [
+      "Base-native perpetuals protocol (gTrade fork)",
+      "Growing trading volume"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://avantis.finance",
+    "docs": "https://docs.avantis.finance",
+    "twitter": "@AvantisLabs"
+  },
+
+  "last_verified": "2026-02-12"
+}

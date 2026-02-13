@@ -1,0 +1,68 @@
+{
+  "id": "seamless_base",
+  "name": "Seamless Protocol",
+  "chain": "base",
+  "category": "lending",
+  "subcategory": "money_market",
+  "has_token": true,
+  "token_symbol": "SEAM",
+  "status": "active",
+  "protocol_weight": 1.0,
+
+  "contracts": [
+    {
+      "address": "0x8f44fd754285aa6a2b8b9b97739b79746e0475a7",
+      "label": "Seamless Pool (Aave V3 Fork)",
+      "type": "core",
+      "detection_mode": "event_topic",
+      "detection_config": {
+        "event_signatures": [
+          {
+            "topic0": "0x2b627736bca15cd5381dcf80b0bf11fd197d01a037c52b927a881a10fb73ba61",
+            "user_address_position": "topic2",
+            "interaction_type": "supply"
+          },
+          {
+            "topic0": "0xb3d084820fb1a9decffb176436bd02558d15fac9b0ddfed8c465bc7359d7dce0",
+            "user_address_position": "topic2",
+            "interaction_type": "borrow"
+          },
+          {
+            "topic0": "0x3115d1449a7b732c986cba18244e897a145df0b3b24d3a8e2c9f2192b4b40d5d",
+            "user_address_position": "topic2",
+            "interaction_type": "withdraw"
+          },
+          {
+            "topic0": "0xa534c8dbe71f871f9f3f77f1149e08cc09b5cceec7617a3a009c8ebd8e461d73",
+            "user_address_position": "topic2",
+            "interaction_type": "repay"
+          }
+        ]
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "SEAM governance token launched"
+    ],
+    "community_speculation": [
+      "Supplying and borrowing likely key criteria",
+      "Integrated Leverage Strategy (ILM) usage may be weighted higher",
+      "Early and consistent usage expected to be rewarded"
+    ],
+    "notable_events": [
+      "Native Base lending protocol",
+      "One of the earliest lending protocols on Base"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://seamlessprotocol.com",
+    "docs": "https://docs.seamlessprotocol.com",
+    "twitter": "@SeamlessFi"
+  },
+
+  "last_verified": "2026-02-12"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "drift_solana",
+  "name": "Drift Protocol",
+  "chain": "solana",
+  "category": "perps",
+  "subcategory": "perpetuals_and_lending",
+  "has_token": true,
+  "token_symbol": "DRIFT",
+  "status": "active",
+  "protocol_weight": 1.0,
+
+  "contracts": [
+    {
+      "address": "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH",
+      "label": "Drift v2 Program",
+      "type": "core",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "Initial DRIFT airdrop completed in 2024 based on trading volume and usage"
+    ],
+    "community_speculation": [
+      "Ongoing distributions possible for continued usage",
+      "Governance participation may factor into future allocations"
+    ],
+    "notable_events": [
+      "DRIFT token launched 2024"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://www.drift.trade",
+    "docs": "https://docs.drift.trade",
+    "twitter": "@DriftProtocol"
+  },
+
+  "last_verified": "2026-02-12"
+}

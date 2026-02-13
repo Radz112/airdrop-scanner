@@ -1,0 +1,46 @@
+{
+  "id": "save_solana",
+  "name": "Save (Solend)",
+  "chain": "solana",
+  "category": "lending",
+  "subcategory": "money_market",
+  "has_token": true,
+  "token_symbol": "SLND",
+  "status": "active",
+  "protocol_weight": 0.8,
+
+  "contracts": [
+    {
+      "address": "So1endDq2YkqhipRh3WViPa8hdiSpxWy6z3Z6tMCpAo",
+      "label": "Solend v1 Program",
+      "type": "core",
+      "detection_mode": "program_id_match",
+      "detection_config": {
+        "instruction_discriminators": null
+      }
+    }
+  ],
+
+  "airdrop_intel": {
+    "confirmed_criteria": [
+      "SLND airdrop completed for early depositors"
+    ],
+    "community_speculation": [
+      "Rebranded to Save — potential new token distribution",
+      "Continued usage may factor into future allocations"
+    ],
+    "notable_events": [
+      "Rebranded from Solend to Save",
+      "SLND token already live"
+    ],
+    "last_reviewed": "2026-02-12"
+  },
+
+  "metadata": {
+    "website": "https://save.finance",
+    "docs": "https://docs.save.finance",
+    "twitter": "@SaveFinance"
+  },
+
+  "last_verified": "2026-02-12"
+}
