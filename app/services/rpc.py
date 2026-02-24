@@ -36,7 +36,11 @@ class EvmRpcClient:
         }
         client = self._get_client()
         resp = await client.post(self._url, json=payload)
-        resp.raise_for_status()
+        if resp.status_code >= 400:
+            logger.warning(
+                f"RPC HTTP {resp.status_code} for {method}: {resp.text[:500]}"
+            )
+            resp.raise_for_status()
         data = resp.json()
         if "error" in data:
             raise RuntimeError(f"RPC error: {data['error']}")
