@@ -70,7 +70,7 @@ async def airdrop_exposure_scan(chain: str, request: Request):
     client_ip = request.client.host if request.client else "unknown"
     logger.info(f"POST /{chain} from {client_ip}, parsed_body={body}")
 
-    address = extract_param(body, "address", aliases=["wallet", "addr", chain])
+    address = extract_param(body, "address", aliases=["wallet", "addr"] + settings.supported_chains)
     if not address or not isinstance(address, str):
         logger.warning(f"400 Missing address, received_body={body}")
         return error_response(
