@@ -154,11 +154,12 @@ class TestApix402BodyUnwrapping:
 
     @patch("app.routes.airdrop.scan_wallet", new_callable=AsyncMock, side_effect=_mock_scan_result)
     @patch("app.routes.airdrop._detect_wallet_type", new_callable=AsyncMock, return_value="eoa")
-    def test_query_fallback(self, mock_wt, mock_scan):
-        """Using 'query' as universal fallback."""
+    def test_query_string_unwrap(self, mock_wt, mock_scan):
+        """APIX query-string format: {"query": "base=0x...&windowDays=90"}."""
+        addr = "0x" + "d" * 40
         resp = client.post(
             "/v1/airdrop-exposure/base",
-            json={"query": "0x" + "d" * 40},
+            json={"query": f"base={addr}&windowDays=90"},
         )
         assert resp.status_code == 200
 

@@ -100,9 +100,10 @@ class TestExtractParam:
         body = {"body": {"wallet": "0xabc"}}
         assert extract_param(body, "address", aliases=["wallet"]) == "0xabc"
 
-    def test_query_fallback(self):
+    def test_query_string_parsed_by_middleware(self):
+        """query field is now parsed into keys by middleware, not extract_param."""
         body = {"query": "0xabc"}
-        assert extract_param(body, "address") == "0xabc"
+        assert extract_param(body, "address") is None
 
     def test_missing_returns_none(self):
         body = {"foo": "bar"}

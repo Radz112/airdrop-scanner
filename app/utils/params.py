@@ -14,7 +14,4 @@ def extract_param(
             if name in request_body["body"]:
                 return request_body["body"][name]
 
-    if "query" in request_body:
-        return request_body["query"]
-
     return None

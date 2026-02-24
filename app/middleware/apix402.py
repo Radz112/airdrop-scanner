@@ -1,5 +1,6 @@
 import json
 import logging
+from urllib.parse import parse_qs
 
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
@@ -29,6 +30,15 @@ class APIX402BodyUnwrapper(BaseHTTPMiddleware):
                 if nested:
                     parsed = {**parsed, **parsed["body"]}
                     del parsed["body"]
+
+                # Parse APIX query-string format: {"query": "key=val&key2=val2"}
+                if "query" in parsed and isinstance(parsed["query"], str):
+                    qs_params = parse_qs(parsed["query"], keep_blank_values=True)
+                    # parse_qs returns lists; flatten single values
+                    flat = {k: v[0] if len(v) == 1 else v for k, v in qs_params.items()}
+                    parsed = {**parsed, **flat}
+                    del parsed["query"]
+                    logger.info(f"Query-string unwrap: extracted keys={list(flat.keys())}")
 
                 logger.info(
                     f"Body unwrap: nested={nested}, "
