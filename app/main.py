@@ -1,6 +1,8 @@
 import logging
+import time
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from starlette.middleware.base import BaseHTTPMiddleware
 
 from app.config import settings
 from app.middleware.apix402 import APIX402BodyUnwrapper
@@ -14,6 +16,18 @@ logging.basicConfig(
 )
 logger = logging.getLogger("app")
 
+class RequestTimingMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        start = time.perf_counter()
+        response = await call_next(request)
+        duration_ms = (time.perf_counter() - start) * 1000
+        logger.info(
+            f"{request.method} {request.url.path} → {response.status_code} "
+            f"({duration_ms:.1f}ms)"
+        )
+        return response
+
+
 app = FastAPI(
     title="Airdrop Likelihood / Exposure Scanner API",
     description=(
@@ -26,6 +40,7 @@ app = FastAPI(
 # Middleware (order: last added = outermost = runs first)
 app.add_middleware(APIX402BodyUnwrapper)
 app.add_middleware(RateLimitMiddleware, requests_per_minute=100)
+app.add_middleware(RequestTimingMiddleware)
 
 app.include_router(airdrop_router)
 

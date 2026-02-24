@@ -67,15 +67,19 @@ async def airdrop_exposure_scan(chain: str, request: Request):
         return error_response(400, err)
 
     body = getattr(request.state, "parsed_body", {})
+    client_ip = request.client.host if request.client else "unknown"
+    logger.info(f"POST /{chain} from {client_ip}, parsed_body={body}")
 
     address = extract_param(body, "address", aliases=["wallet", "addr"])
     if not address or not isinstance(address, str):
+        logger.warning(f"400 Missing address, received_body={body}")
         return error_response(
             400, "Missing required parameter: 'address'", received_body=body
         )
 
     address = address.strip()
     if not validate_address(address, chain):
+        logger.warning(f"400 Invalid address: '{address}', chain={chain}, received_body={body}")
         return error_response(
             400,
             f"Invalid {chain} address: '{address}'",
@@ -93,6 +97,8 @@ async def airdrop_exposure_scan(chain: str, request: Request):
         except (ValueError, TypeError):
             window_days = settings.default_window_days
 
+    logger.info(f"Resolved params: address={address}, windowDays={window_days}")
+
     cache_key = f"{chain}:{address}:{window_days}"
     cached = scan_cache.get(cache_key)
     if cached:
@@ -101,6 +107,7 @@ async def airdrop_exposure_scan(chain: str, request: Request):
 
     protocols = protocol_db.get_by_chain(chain)
     if not protocols:
+        logger.warning(f"503 No protocols for chain '{chain}'")
         return error_response(
             503,
             f"No protocols loaded for chain '{chain}'. Database may be empty.",
@@ -177,7 +184,12 @@ async def airdrop_exposure_scan(chain: str, request: Request):
     result = response.model_dump(by_alias=True)
 
     scan_cache.set(cache_key, result)
-    logger.info(f"Scan complete and cached for {cache_key}")
+    logger.info(
+        f"Scan complete for {cache_key}: "
+        f"tokenless_signals={len(tokenless_signals)}, "
+        f"tokened_signals={len(tokened_signals)}, "
+        f"completeness={completeness}"
+    )
 
     return result
 

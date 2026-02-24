@@ -1,11 +1,14 @@
 from __future__ import annotations
 
+import logging
 import time
 from collections import defaultdict
 
 from fastapi import Request, Response
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.responses import JSONResponse
+
+logger = logging.getLogger("middleware.rate_limit")
 
 
 class RateLimitMiddleware(BaseHTTPMiddleware):
@@ -37,6 +40,10 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
         self._hits[client_ip] = [t for t in hits if t > window_start]
 
         if len(self._hits[client_ip]) >= self._rpm:
+            logger.warning(
+                f"Rate limited: ip={client_ip}, "
+                f"hits={len(self._hits[client_ip])}/{self._rpm}"
+            )
             return JSONResponse(
                 status_code=429,
                 content={
