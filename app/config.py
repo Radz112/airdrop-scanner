@@ -31,8 +31,8 @@ class Settings(BaseSettings):
     # Base chain block time (~2 seconds)
     base_block_time_seconds: int = 2
 
-    # Max block range per eth_getLogs call (free RPCs limit to ~10k)
-    max_log_block_range: int = 10000
+    # Max block range per eth_getLogs call (Alchemy limits to ~2k on Base)
+    max_log_block_range: int = 2000
 
     # Max total block range for scan window (0 = unlimited, use for free RPC testing)
     max_scan_block_range: int = 0
